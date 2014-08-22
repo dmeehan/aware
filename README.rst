@@ -1,4 +1,4 @@
-mockups
+AWARE Institure
 ================
 
-A template for creating static html mockups
+Website for the AWARE Institute
