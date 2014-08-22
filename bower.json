@@ -1,0 +1,23 @@
+{
+  "name": "static",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dmeehan/backbeat-mockup",
+  "authors": [
+    "Douglas Meehan <dmeehan@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~3.2.3",
+    "neat": "~1.5.1",
+    "leaflet": "~0.7.3",
+    "jquery": "~2.1.1"
+  }
+}
