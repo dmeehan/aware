@@ -658,6 +658,11 @@ body {
         display: table;
         clear: both; }
       .module.footer .contact-wrapper .contact-info .contact-address {
+        background-image: url('../images/aware_logo.png');
+        background-color: rgba(255, 255, 255, 0.8);
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 50%;
         float: left;
         display: block;
         margin-right: 2.35765%;
@@ -665,7 +670,6 @@ body {
         margin-left: 51.17883%;
         border: 1px solid white;
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.8);
         padding: 3em;
         margin-top: 3em; }
         .module.footer .contact-wrapper .contact-info .contact-address:last-child {
