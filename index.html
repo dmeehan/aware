@@ -123,17 +123,12 @@
           <header>
             <h2>Our Work</h2>
           </header>
-          <ul class="project-list">
-              <li class="project">
-                <div class="project-image">
-                  Photo
-                </div>
-                <header class="project-header">
-                  Project
-                </header>
-                <div class="project-copy">
-                  <p> 
-The AZA Elephant Welfare Initiative is collaborative effort toward positioning the AZA elephant care community at the forefront of evidence-based welfare-focused animal management.  To execute this initiative, AWARE employs a model that leverages the collective efforts of AZA elephant holding zoos, and supports enhanced practice of elephant management through:
+          <div class="project">
+            <div class="image"></div>
+              <div class="content">
+              <h1>AZA Elephant Welfare Initiative</h1>
+              <p> 
+                The AZA Elephant Welfare Initiative is collaborative effort toward positioning the AZA elephant care community at the forefront of evidence-based welfare-focused animal management.  To execute this initiative, AWARE employs a model that leverages the collective efforts of AZA elephant holding zoos, and supports enhanced practice of elephant management through:
                 </p>
                 <ul>
                   <li>Application of scientific methods to develop and implement effective management refinements.</li>
@@ -142,31 +137,7 @@ The AZA Elephant Welfare Initiative is collaborative effort toward positioning t
                   <li>Support of elephant care staff with education and software tools to enable enhanced elephant care</li>
                   <li>Connection of zoos for multi-institutional collaboration and goal setting</li>
                 </ul>
-                </div>
-            </li> 
-            <li class="project">
-                <div class="project-image">
-                  Photo
-                </div>
-                <header class="project-header">
-                  Project
-                </header>
-                <div class="project-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
-                </div>
-            </li> 
-            <li class="project">
-                <div class="project-image">
-                  Photo
-                </div>
-                <header class="project-header">
-                  Project
-                </header>
-                <div class="project-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
-                </div>
-            </li> 
-          </ul>
+            </div>
           </div>
         </section>
         <footer class="module footer" id="contact">
@@ -176,14 +147,14 @@ The AZA Elephant Welfare Initiative is collaborative effort toward positioning t
           <aside class="contact-wrapper">
               <div class="contact-info">
                 <div class="contact-address">
-                  <p>AWARE Institute<p>
+                  <h4>AWARE Institute</h4>
                   <p>3212 NW Wilson St.<br />
                    Portland, OR<br />
                    971210
                   </p>
-                  <p>t. 555.555.5555</p>
-                  <p>f. 555.555.5555</p>
-                  <p>e. info@aware.institute</p>
+                  <p>t. 555.555.5555<br/>
+                  f. 555.555.5555<br />
+                  e. info@aware.institute</p>
                 </div>
               </div>
           </aside>
@@ -213,7 +184,14 @@ The AZA Elephant Welfare Initiative is collaborative effort toward positioning t
           }).addTo(map);
 
           // add a marker in the given location, attach some popup content to it
-          L.marker([45.537327, -122.714843]).addTo(map)
+          L.circleMarker([45.537327, -122.714843],  {
+            color: '#C9C5A2',
+            fillColor: '#5E717D',
+            opacity: 0.5,
+            fillOpacity: 0.7,
+            radius: 20,
+            weight: 8
+          }).addTo(map)
         </script>
     </body>
 </html>

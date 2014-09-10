@@ -95,7 +95,7 @@ body {
     width: $navigation-height;
     margin: $base-line-height/2*1em; 
   	border-radius: 50%;
-  	border: 1px solid white;
+  	border: 1px solid $blue;
   	background-color: transparentize($navigation-background, 0.1);
     color: $navigation-color;
     font-weight: 700;
@@ -260,155 +260,68 @@ body {
 /* PROJECTS MODULE */
 
 .module.projects {
-	$project-padding: $base-spacing;
-	$project-border-color: $base-border-color;
- 	$project-border: 1px solid $project-border-color;
-  	$project-background: lighten($project-border-color, 10);
-  	$project-header-background: $project-background;
-  	$project-hover-background: lighten($project-background, 5);
-  	$project-image-background: #DBD199;
-  	$project-image-hover-background: lighten($project-image-background, 5);
- 	$project-stats-color: lighten($base-accent-color, 10);
- 	$project-profile-photo-size: 4em;
+	$side-image-background-top: $light-blue;
+	$side-image-background-bottom: $tan;
+	$side-image-border: 1px solid darken(transparentize($side-image-background-bottom, .8), 30);
 
- 	//padding-top: 30px;
- 	margin-bottom: $base-line-height*2em;
+	.project {
+	  @include outer-container;
+	  background: lighten($tan, 25);
 
-	.project-list {
-		@include outer-container;
-		@include clearfix;
+	  @include media($large-screen) {
+	    @include row(table);
+	  }
 
-		@include media($large-screen) {
-    		padding: 0;
+	  .image {
+	    @include background(url('../images/banner.png'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
+	    background-color: $side-image-background-top;
+	    border-bottom: $side-image-border;
+	    background-size: cover;
+	    display: block;
+	    min-height: 12em;
+	    padding: 3em;
 
-  		}
-  		
-		padding: 0 $base-spacing;
+	    @include media($large-screen) {
+	      @include span-columns(4);
+	      background-position: bottom;
+	      background-size: cover;
+	      border-right: $side-image-border;
+	    }
+	  }
 
-		.project {
-			@include transition (all 0.2s ease-in-out);
-			background-color: $project-background;
-			//border-radius: $base-border-radius;
-			border: $project-border;
-			margin-bottom: $base-spacing;
-			cursor: pointer;
-			//box-shadow: 0 2px 4px darken($base-background-color, 10);
-			position: relative;
-			
-			@include media($large-screen) {
-    			@include span-columns(4);  
-    			@include omega(3n);
-  			}
+	  .content {
+	    @include span-columns(12);
+	    padding: 1em 1em 4em 1em;
 
-  			.project-image {
-			    overflow: hidden;
-			    max-height: 150px;
-			    height: 150px;
-			    background: $base-accent-color;
-			    line-height: 150px;
-			    text-align: center;
+	    @include media($large-screen) {
+	      @include span-columns(8);
+	      padding: 4em 4em 8em 4em;
+	    }
+	  }
 
-			    img {
-			      width: 100%;
-			      @include transition (all 0.2s ease-in-out);
-			      background: $project-image-background;
-			      //border-top-left-radius: $base-border-radius;
-			      //border-top-right-radius: $base-border-radius;
-			    }
-			 }
+	  .content h1 {
+	    margin-bottom: .9em;
+	  }
 
-  			.project-header {
-    			@include transition (all 0.2s ease-in-out);
-    			background-color: $project-header-background;
-    			border-bottom: $project-border;
-    			//border-radius: $base-border-radius $base-border-radius 0 0;
-    			font-weight: bold;
-    			padding: $project-padding/3 $gutter/2;
+	  .content p,
+	  .content ul {
+	    color: gray;
+	  }
 
-  			}
+	  .content ul {
+	  	list-style-type: disc;
+    	margin-bottom: $base-spacing / 2;
+    	padding-left: $base-spacing;
+	  }
 
-  			.project-copy {
-			    padding: $project-padding/2  $gutter/2;
-			    font-size: .9em;
-			    line-height: 1.5em;
-			    padding-bottom: 0;
-			}
-
-			.project-people {
-				@include clearfix;
-
-				padding: $project-padding/2  $gutter/2;
-
-				.profile-photo {
-					float: left;
-    				background: $base-accent-color;
-    				padding: $project-profile-photo-size / 2;
-    				border-radius: 50%;
-    				width: $project-profile-photo-size;
-    				height: $project-profile-photo-size;
-    				margin-right: $gutter/2;
-				}
-
-				.profile-name {
-					margin-left: $project-profile-photo-size *1.4;
-    				line-height: $project-profile-photo-size;
-				}
-			}
-
-			.project-stats {
-			    padding: $project-padding/2  $gutter/2;
-			    overflow: auto;	
-
-			    ul li {
-			      display: inline;
-			      color: $project-stats-color;
-			      font-weight: 800;
-			      font-size: 1.2em;
-			      float: left;
-			      border-right: 1px solid transparentize($base-font-color, .8);
-			      line-height: 1.1em;
-			      padding: 0 .7em 0 .7em;
-
-			      &:first-child {
-			        padding-left: 0;
-			      }
-
-			      &:last-child {
-			        border-right: 0;
-			      }
-
-			      span {
-			        color: $base-font-color;
-			        font-size: .7em;
-			        display: block;
-			        font-weight: normal;
-			      }
-			    }
-  
-
-			}
-
-			&:hover {
-			    background-color: $project-hover-background;
-			    
-			    .project-image img {
-			      background: $project-image-hover-background;
-			    }
-			  
-			    .project-header {
-			      background-color: $project-hover-background;
-			    }
-			  }
-
-			  &:active {
-			    background-color: $project-background;
-
-			    .project-header {
-			      background-color: $project-background;
-			    }
-			}
-		}
+	  .content button {
+	    @include button(simple, white);
+	    font-size: $base-font-size;
+	    outline: none;
+	  }
+	  @include reset-display();
 	}
+
 }
 
 
@@ -416,7 +329,7 @@ body {
 /* PROFILES MODULE */
 
 .module.profiles {
-	$module-background: lighten($tan, 10);
+	$module-background: lighten($tan, 15);
 	$profile-photo-size: 18em;
 
 	> header {
@@ -471,40 +384,6 @@ body {
 	}
 }
 
-
-
-/* LEARN MORE MODULE */
-
-.module.more {
-	.more-content {
-		@include outer-container;
-
-		@include media($large-screen) {
-    		padding: 0;
-  		}
-
-		padding: 0 $base-spacing;
-
-		h3 {
-			margin-bottom: $base-line-height*.5em;
-		}
-
-		.more-about {
-			@include media($large-screen) {
-				@include span-columns(8);
-			}
-			margin-bottom: $base-spacing;
-		}
-
-		.more-links {
-			@include media($large-screen) {
-				@include span-columns(4);
-				@include omega();
-			}
-			margin-bottom: $base-spacing;
-		}
-	}
-}
 
 
 
@@ -579,6 +458,10 @@ body {
 				background: transparentize(white, 0.2);
 				padding: $base-line-height*2em;
 				margin-top: $base-line-height*2em;
+
+				h4 {
+					margin-bottom: $base-spacing/2;
+				}
 			}
 		}
 	}
