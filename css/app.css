@@ -447,6 +447,51 @@ body {
         opacity: 0.5;
         cursor: not-allowed; }
 
+/* ABOUT MODULE */
+.module.about {
+  overflow: auto; }
+  .module.about .about-list {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5em; }
+    @media screen and (min-width: 53.75em) {
+      .module.about .about-list {
+        padding: 0; } }
+    .module.about .about-list:after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media screen and (min-width: 53.75em) {
+      .module.about .about-list .about-item {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        .module.about .about-list .about-item:last-child {
+          margin-right: 0; }
+        .module.about .about-list .about-item:nth-child(2n) {
+          margin-right: 0; }
+        .module.about .about-list .about-item:nth-child(2n+1) {
+          clear: left; } }
+    .module.about .about-list .about-item .about-icon {
+      float: left;
+      background: #85AEC9;
+      padding: 1.25em;
+      border: 3px solid #C9C5A2;
+      border-radius: 50%;
+      width: 5em;
+      height: 5em; }
+    .module.about .about-list .about-item .about-description {
+      margin-left: 6.5em;
+      margin-bottom: 2em; }
+      .module.about .about-list .about-item .about-description h2 {
+        font-size: 1.8em;
+        padding-top: 0.71429em;
+        margin-bottom: 0.83333em;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+        display: inline-block; }
+
 /* PROJECTS MODULE */
 .module.projects .project {
   max-width: 68em;
@@ -470,7 +515,6 @@ body {
     background: url('../images/banner.png'), -webkit-linear-gradient( #85AEC9, #C9C5A2), no-repeat #85AEC9 scroll;
     background: url('../images/banner.png'), linear-gradient( #85AEC9, #C9C5A2), no-repeat #85AEC9 scroll;
     background-color: #85AEC9;
-    border-bottom: 1px solid rgba(132, 126, 77, 0.2);
     background-size: cover;
     display: block;
     min-height: 12em;
@@ -490,7 +534,7 @@ body {
       .module.projects .project .content {
         display: table-cell;
         width: 66.66667%;
-        padding: 4em 4em 8em 4em; } }
+        padding: 4em 4em 4em 4em; } }
   .module.projects .project .content h1 {
     margin-bottom: 0.9em; }
   .module.projects .project .content p, .module.projects .project .content ul {
@@ -596,85 +640,49 @@ body {
         .module.profiles .profile-list .profile .profile-description h3 {
           font-size: 1.5em; }
         .module.profiles .profile-list .profile .profile-description p {
-          margin-top: 0.75em; }
-
-/* ABOUT MODULE */
-.module.about {
-  overflow: auto; }
-  .module.about .about-list {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1.5em; }
-    @media screen and (min-width: 53.75em) {
-      .module.about .about-list {
-        padding: 0; } }
-    .module.about .about-list:after {
-      content: "";
-      display: table;
-      clear: both; }
-    @media screen and (min-width: 53.75em) {
-      .module.about .about-list .about-item {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 48.82117%; }
-        .module.about .about-list .about-item:last-child {
-          margin-right: 0; }
-        .module.about .about-list .about-item:nth-child(2n) {
-          margin-right: 0; }
-        .module.about .about-list .about-item:nth-child(2n+1) {
-          clear: left; } }
-    .module.about .about-list .about-item .about-icon {
-      float: left;
-      background: #5E717D;
-      padding: 1em;
-      border-radius: 50%;
-      width: 4em;
-      height: 4em; }
-    .module.about .about-list .about-item .about-description {
-      margin-left: 5.6em;
-      margin-bottom: 2em; }
-      .module.about .about-list .about-item .about-description h2 {
-        font-size: 1.6em;
-        padding-top: 0.57143em;
-        margin-bottom: 0.66667em;
-        border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-        display: inline-block; }
+          margin: 1.5em;
+          margin-top: 0.75em;
+          text-align: justify; }
 
 /* FOOTER MODULE */
-.module.footer {
+.module.contact {
   position: relative; }
-  .module.footer .contact-wrapper {
+  .module.contact .contact-wrapper {
     position: absolute;
     z-index: 999999;
-    width: 100%; }
-    .module.footer .contact-wrapper .contact-info {
+    width: 100%;
+    padding: 1.5em; }
+    @media screen and (min-width: 53.75em) {
+      .module.contact .contact-wrapper {
+        padding: 0; } }
+    .module.contact .contact-wrapper .contact-info {
       max-width: 68em;
       margin-left: auto;
       margin-right: auto; }
-      .module.footer .contact-wrapper .contact-info:after {
+      .module.contact .contact-wrapper .contact-info:after {
         content: "";
         display: table;
         clear: both; }
-      .module.footer .contact-wrapper .contact-info .contact-address {
+      .module.contact .contact-wrapper .contact-info .contact-address {
         background-image: url('../images/aware_logo.png');
         background-color: rgba(255, 255, 255, 0.8);
         background-repeat: no-repeat;
         background-position: center right;
         background-size: 50%;
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 48.82117%;
-        margin-left: 51.17883%;
         border: 1px solid white;
         border-radius: 8px;
         padding: 3em;
         margin-top: 3em; }
-        .module.footer .contact-wrapper .contact-info .contact-address:last-child {
-          margin-right: 0; }
-        .module.footer .contact-wrapper .contact-info .contact-address h4 {
+        @media screen and (min-width: 53.75em) {
+          .module.contact .contact-wrapper .contact-info .contact-address {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 48.82117%;
+            margin-left: 51.17883%; }
+            .module.contact .contact-wrapper .contact-info .contact-address:last-child {
+              margin-right: 0; } }
+        .module.contact .contact-wrapper .contact-info .contact-address h4 {
           margin-bottom: 0.75em; }
-  .module.footer .map-container {
+  .module.contact .map-container {
     height: 40em; }
