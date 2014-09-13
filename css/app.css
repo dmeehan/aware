@@ -518,7 +518,11 @@ body {
     background-size: cover;
     display: block;
     min-height: 12em;
-    padding: 3em; }
+    padding: 3em;
+    position: relative; }
+    .module.projects .project .image img {
+      position: absolute;
+      bottom: 0; }
     @media screen and (min-width: 53.75em) {
       .module.projects .project .image {
         display: table-cell;

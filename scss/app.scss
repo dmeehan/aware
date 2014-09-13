@@ -332,6 +332,13 @@ body {
 	    min-height: 12em;
 	    padding: 3em;
 
+	    position: relative;
+
+	    img {
+	    	position: absolute;
+	    	bottom: 0;
+	    }
+
 	    @include media($large-screen) {
 	      @include span-columns(4);
 	      background-position: bottom;
